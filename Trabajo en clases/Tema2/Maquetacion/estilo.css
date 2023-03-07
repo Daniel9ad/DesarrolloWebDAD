@@ -1,0 +1,20 @@
+body {
+
+}
+
+#contenedor{
+    width: 30%;
+    background-color: blueviolet;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+#contenedor li.par {
+    background-color: brown;
+    overflow: hidden;
+}
+
+ul.menu{
+    background-color: rgb(43, 186, 88);
+    overflow: hidden;
+}
