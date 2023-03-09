@@ -1,0 +1,37 @@
+body{
+    margin: auto;
+}
+
+header{
+    display: flex;
+    background-color: rgb(255, 255, 36);
+    justify-content: center;
+    padding: 10px;
+}
+
+div.menu{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+div li{
+    padding: 5px;
+    color: white;
+}
+
+div.contenedor{
+    display: flex;
+}
+
+div.contenedor2{
+    display: flex;
+    flex-direction: column;
+    padding: 70px;
+}
+
+div.contenedor3{
+    display: flex;
+    flex-direction: row;
+}
