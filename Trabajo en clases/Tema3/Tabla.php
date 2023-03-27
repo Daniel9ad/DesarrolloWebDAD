@@ -9,7 +9,8 @@
 </head>
 
 <body>
-    <?php $filas = 100;
+    <?php
+    $filas = 100;
     $columnas = 100;
     ?>
     <table>

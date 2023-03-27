@@ -1,0 +1,13 @@
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-evenly;
+}
+
+.item{
+    background-color: aqua;
+    width: 100px;
+    height: 100px;
+}
