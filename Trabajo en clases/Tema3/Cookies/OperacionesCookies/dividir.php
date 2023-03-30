@@ -2,7 +2,7 @@
     include("Operaciones.php");
     if (isset($_COOKIE['a']) and isset($_COOKIE['b'])) {
         $op = new Operaciones($_COOKIE['a'],$_COOKIE['b']);
-        echo "La suma es: ".$op->divicion();
+        echo "La divicion es: ".$op->divicion();
     }else{
         echo "No existen valores";
     }
