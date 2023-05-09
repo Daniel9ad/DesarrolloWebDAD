@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function listaAlumnos(materia, alumno){
+            this.material = materia
+            this.alumno = alumno
+            this.mostrar = mostrar
+        }
+        function mostrar(){
+            document.write("La materia es "+this.materia+"<br>")
+            document.write("Alumnos<br>")
+            for(let i=0; i<this.alumno.length;i++){
+                document.write(this.alumno[i].nombre+" ")
+                document.write(this.alumno[i].apellido+"<br>")
+            }
+        }
+        let lista1 = new listaAlumnos("Matematicas",[{nombre:"Juan",apellido:'Perez'},{nombre:"Pedro",apellido:'Perez'}])
+        lista1.mostrar()
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    a: <input type="number" id="a">
+    b: <input type="number" id="b">
+    <select name="" id="operaciones" onchange="cambiarOperacion">
+        <option value="suma">suma</option>
+        <option value="resta">resta</option>
+        <option value="multiplicacion">multiplicacion</option>
+        <option value="divicion">divicion</option>
+    </select>
+    <button id="boton">calcular</button>
+    <div>
+        Resultado: <span id="Resultado"></span>
+    </div>
+
+    <script>
+        document.getElementById('boton').onclick = sumar
+        function cambiarOperacion(){
+            let operaciones = document.getElementById('operaciones').value
+            switch(operacion){
+                case 'suma':
+                    document.getElementById('boton').onclick = sumar
+                    break;
+                case 'resta':
+                    document.getElementById('boton').onclick = restar
+                    break;
+                case 'multiplicacion':
+                    document.getElementById('boton').onclick = multiplicar
+                    break;
+                case 'divicion':
+                    document.getElementById('boton').onclick = dividir
+                    break;
+            }
+        }
+        function sumar(){
+            let a = document.getElementById('a').value
+            let b = document.getElementById('b').value
+            document.getElementById('Resultado').innerHTML = a+b
+        }
+        function restar(){
+            let a = document.getElementById('a').value
+            let b = document.getElementById('b').value
+            document.getElementById('Resultado').innerHTML = a-b
+        }
+        function multiplicar(){
+            let a = document.getElementById('a').value
+            let b = document.getElementById('b').value
+            document.getElementById('Resultado').innerHTML = a*b
+        }
+        function dividir(){
+            let a = document.getElementById('a').value
+            let b = document.getElementById('b').value
+            document.getElementById('Resultado').innerHTML = a/b
+        }
+    </script>
+</body>
+</html>

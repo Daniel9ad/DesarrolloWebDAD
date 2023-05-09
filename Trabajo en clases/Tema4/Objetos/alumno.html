@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Otra forma de crear un objeto
+        let  alumno = {nombre:"Ricardo",apellidos:"Lopez",cu:"111-483",
+            materias:[{sigla:'sis256',docente:'montellano'},{sigla:'sis420',docente:'pacheco'}]
+        }
+        console.log(alumno)
+        document.write(alumno)
+        // Cobierte un objeto en JSON
+        let alumnoJSON = JSON.stringify(alumno)
+        document.write(alumnoJSON)
+    </script>
+</body>
+</html>
