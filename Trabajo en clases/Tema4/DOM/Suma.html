@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Cantidad</label>
+    <input type="numero" id="n">
+    <button type="button" id="boton">Generar</button>
+    <div id="valores"></div>
+    <button type="button" id="boton2">Calcular</button>
+    <div id="resultado"></div>
+
+    <script>
+        document.getElementById('boton').addEventListener('click', function (){
+            var n = document.getElementById('n').value
+            var html = ""
+            for (let i=0; i<n; i++){
+                html += '<div><input type="numero" name="s"></div>'
+            }    
+            document.getElementById('valores').innerHTML = html     
+        })
+        document.getElementById('boton2').addEventListener('click', function (){
+            sumandos = document.getElementsByName('s')
+            //document.write(sumandos)
+            let suma = 0
+            for(let i=0; i<sumandos.length; i++){
+                suma += sumandos[i].valuesAsNumber
+            }
+            document.write(suma)
+            //document.getElementById('resultado').innerHTML = "La suma es:"
+        })
+    </script>
+</body>
+</html>
