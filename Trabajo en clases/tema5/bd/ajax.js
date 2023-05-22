@@ -1,5 +1,4 @@
 function cargarContenido(abrir) {
-
     var contenedor;
     contenedor = document.getElementById('datos');
     var ajax = new XMLHttpRequest() //crea el objetov ajax 
@@ -12,6 +11,7 @@ function cargarContenido(abrir) {
     ajax.setRequestHeader("Content-Type", "text/html; charset=utf-8");
     ajax.send();
 }
+
 function editarPersona(id) {
     var contenedor;
     contenedor = document.getElementById('datos');
@@ -25,6 +25,7 @@ function editarPersona(id) {
     ajax.setRequestHeader("Content-Type", "text/html; charset=utf-8");
     ajax.send();
 }
+
 function crearPersona() {
     var contenedor;
     contenedor = document.getElementById('datos');

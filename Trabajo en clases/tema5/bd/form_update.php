@@ -27,7 +27,6 @@
             <label for="archivo">Fotografia:</label>
             <input type="file" name="archivo">
         </div>
-        
         <div>
             <label for="nombres">Nombres:</label>
             <input type="text" name="nombres" value="<?php echo $row['nombres']; ?>">
