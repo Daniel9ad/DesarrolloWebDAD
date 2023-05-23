@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Elemetos Lista <input type="text" id="texto">
+    <button onclick="agregar()">Añadir</button>
+    <div id="contenido">
+
+    </div>
+    <script>
+        var ListaCompras = []
+        function agregar(){
+            let contenido = document.getElementById("texto").value
+            ListaCompras = ListaCompras.concat([contenido])
+            var con = `<ul>`
+            var bandera = true
+            ListaCompras.forEach(element => {
+                for(let i=0; i<element.length; i++){
+                    if (element[i]=='d'){
+                        if (element[i+1]=='e'){
+                            con += `<li style="background-color: yellow;">${element}</li>`
+                            bandera = false
+                        }
+                    }
+                }
+                if (bandera){
+                    con += `<li>${element}</li>`
+                }
+                bandera = true
+            });
+            con += `</ul>`
+            document.getElementById('contenido').innerHTML = con
+        }
+    </script>
+</body>
+</html>

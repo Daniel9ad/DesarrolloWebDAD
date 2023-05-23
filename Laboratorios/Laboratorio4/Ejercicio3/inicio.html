@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="Bowser.png" alt="" id="imagen">
+    <div>
+        <input type="number" id="cantidad">
+        <button onclick="agrandar()">Agrandar</button>
+        <button onclick="reducir()">Reducir</button>
+    </div>
+    <script>
+        function agrandar(){
+            var cantidad = document.getElementById('cantidad').value
+            document.getElementById('imagen').width += parseFloat(cantidad)
+        }
+        function reducir(){
+            var cantidad = document.getElementById('cantidad').value
+            document.getElementById('imagen').width -= parseFloat(cantidad)
+        }
+    </script>
+</body>
+</html>

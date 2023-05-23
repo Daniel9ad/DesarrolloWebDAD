@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabla estudiantes</h1>
+    <div id="contenido">
+
+    </div>
+    <button onclick="encontrarMejorEstudiante()">Mayor</button>
+    <script>
+        function Estudiante(nombre, edad, materia, nota){
+            this.nombre = nombre
+            this.edad = edad
+            this.materia = materia
+            this.nota = nota
+        }
+        var n = prompt("Cantidad de estudiantes")
+        var estudiantes = []
+        for (let i=0; i<n; i++){
+            let nom = prompt("Nombre")
+            let e = prompt("Edad")
+            let m = prompt("Materia")
+            let no = prompt("Nota")
+            var es = new Estudiante(nom,e,m,no)
+            estudiantes = estudiantes.concat([es])
+        }
+        document.write(`<table style="border: 1px solid black">`);
+        document.write(`<tr><th>nro</th><th>Nombre</th><th>Edad</th><th>Materia</th><th>Nota</th></tr>`);
+        var contador = 1;
+        estudiantes.forEach(element => {
+            document.write(`<tr id="${contador}" style="border: 1px solid black">`)
+            document.write(`<td>${contador}</td>`)
+            document.write(`<td>${element.nombre}</td>`)
+            document.write(`<td>${element.edad}</td>`)
+            document.write(`<td>${element.materia}</td>`)
+            document.write(`<td>${element.nota}</td>`)
+            document.write(`</tr>`)
+            contador += 1
+        });
+        document.write(`</table>`);
+        function encontrarMejorEstudiante(){
+            var mayor = 0
+            var idmayor = ''
+            var con = 1
+            estudiantes.forEach(element => {
+                if (parseInt(element.nota)>mayor){
+                    mayor = parseInt(element.nota)
+                    idmayor = con
+                }
+                con+=1
+            });
+            document.getElementById(idmayor).style.backgroundColor = 'green'
+        }
+    </script>
+</body>
+</html>
