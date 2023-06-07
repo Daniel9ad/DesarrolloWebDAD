@@ -1,0 +1,33 @@
+.contenedor{
+    margin: 0 auto;
+    width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid green;
+}
+
+#contenido{
+    width: 700px;
+}
+
+#menu{
+    width: 198px;
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid green;
+    align-items: center;
+}
+
+.b1{
+    text-align: center;
+    padding: 10px;
+
+    margin-top: 5px;
+    border: 1px solid black;
+}
+
+#mensaje{
+    width: 900px;
+    height: 20px;
+    background-color: blue;
+}
