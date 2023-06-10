@@ -17,8 +17,8 @@ $resultado = $con->query($sql);
 
 <body>
 
-    <form action="javascript:crearPersona()" method="POST" enctype="multipart/form-data" id="form-persona"
-><div>
+    <form action="javascript:crearPersona()" method="POST" enctype="multipart/form-data" id="form-persona">
+        <div>
             <label for="archivo">Fotografia:</label>
             <input type="file" name="archivo">
         </div>
